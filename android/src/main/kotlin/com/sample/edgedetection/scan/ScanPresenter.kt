@@ -331,6 +331,7 @@ class ScanPresenter constructor(
                         val corner = processPicture(img)
                         busy = false
                         if (null != corner && corner.corners.size == 4) {
+                            print("Yazan")
                             it.onNext(corner)
                         } else {
                             it.onError(Throwable("paper not detected"))
