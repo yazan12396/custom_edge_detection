@@ -330,8 +330,9 @@ class ScanPresenter constructor(
                     Observable.create<Corners> {
                         val corner = processPicture(img)
                         busy = false
+                        println("Yazan")
                         if (null != corner && corner.corners.size == 4) {
-                            print("Yazan")
+                            println("Yazan")
                             it.onNext(corner)
                         } else {
                             it.onError(Throwable("paper not detected"))
