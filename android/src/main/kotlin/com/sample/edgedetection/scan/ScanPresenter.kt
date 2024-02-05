@@ -332,6 +332,7 @@ class ScanPresenter constructor(
                         busy = false
                         println("Yazan")
                         if (null != corner && corner.corners.size == 4) {
+                            shut()
                             println("Yazan")
                             it.onNext(corner)
                         } else {
