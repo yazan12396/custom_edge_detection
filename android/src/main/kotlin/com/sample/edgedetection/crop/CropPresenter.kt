@@ -33,6 +33,8 @@ class CropPresenter(
     private var rotateBitmapDegree: Int = -90
 
     fun onViewsReady(paperWidth: Int, paperHeight: Int) {
+        //crop dirctly yazan
+        crop()
         iCropView.getPaperRect().onCorners2Crop(corners, picture?.size(), paperWidth, paperHeight)
         val bitmap = Bitmap.createBitmap(
             picture?.width() ?: 1080, picture?.height()
